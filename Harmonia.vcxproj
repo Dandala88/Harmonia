@@ -20,12 +20,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dimensions.cpp" />
+    <ClCompile Include="entity.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dimensions.h" />
+    <ClInclude Include="entity.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="vector2.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

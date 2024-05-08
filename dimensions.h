@@ -1,8 +1,11 @@
 #pragma once
 
-struct Dimensions
+namespace Harmonia
 {
-public:
-    int w;
-    int h;
-};
+    struct Dimensions
+    {
+    public:
+        int w;
+        int h;
+    };
+}
