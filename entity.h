@@ -19,9 +19,9 @@ namespace Harmonia
 
 		Entity(std::string name, Vec2* location, Dimensions dimensions, Shine* shine);
 
-		bool Create();
-		void Update(float dt);
-		void Destroy();
+		virtual bool Create();
+		virtual void Update(float dt);
+		virtual void Destroy();
 
 		~Entity();
 	};

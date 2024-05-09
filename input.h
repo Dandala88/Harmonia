@@ -1,16 +1,16 @@
 #pragma once
 #include "entity.h"
+#include <functional>
 
 namespace Harmonia
 {
 	class Input
 	{
 	public:
+		std::function<void(Vec2)> directional;
 		Entity* control;
-		//Speed cannot stay here but is a temporary measure to finish the entity base class
-		float speed;
 
-		Input(Entity* control, float speed);
+		Input(Entity* control);
 
 		void Update(float deltaTime);
 	};

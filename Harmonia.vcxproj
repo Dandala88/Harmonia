@@ -24,7 +24,9 @@
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="input.cpp" />
+    <ClCompile Include="log.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="rectangle.cpp" />
     <ClCompile Include="shine.cpp" />
     <ClCompile Include="vec2.cpp" />
@@ -35,6 +37,8 @@
     <ClInclude Include="entity.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="input.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="player.h" />
     <ClInclude Include="rectangle.h" />
     <ClInclude Include="shine.h" />
     <ClInclude Include="vec2.h" />

@@ -1,8 +1,6 @@
 #include "input.h"
 
-Harmonia::Input::Input(Entity* control, float speed) : control(control), speed(speed)
-{
-}
+Harmonia::Input::Input(Entity* control) : control(control){}
 
 void Harmonia::Input::Update(float deltaTime)
 {
@@ -36,7 +34,6 @@ void Harmonia::Input::Update(float deltaTime)
 
 	if (inputMade)
 	{
-		*control->location += input.normalize() * speed * deltaTime;
-
+		directional(input);
 	}
 }

@@ -1,6 +1,7 @@
 #include <SDL.h>
 #include "game.h"
 #include "rectangle.h"
+#include "player.cpp"
 
 using namespace Harmonia;
 
@@ -18,20 +19,22 @@ Rectangle playerRect
 
 Vec2 playerPosition = { 0, 0 };
 
-Entity player =
+Player player =
 {
 	"Player",
 	&playerPosition,
 	{ 16, 16 },
 	&playerRect,
+	100,
 };
 
-Input input(&player, 100);
+Input input(&player);
 
 int main(int argc, char* args[])
 {
 	if (game.create())
 	{
+		input.directional = ([&](Vec2 vec) { player.Move(vec); });
 		game.update(&input);
 	}
 

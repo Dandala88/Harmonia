@@ -13,60 +13,84 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Game Files">
+      <UniqueIdentifier>{d10cfdd9-a9b2-43a8-8d73-dd2875d1952d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineFiles">
+      <UniqueIdentifier>{2f9b7a08-35ea-4587-96b1-0be8cb4efaa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine Headers">
+      <UniqueIdentifier>{1583807c-e905-41cc-b14e-6a039c46add3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game Headers">
+      <UniqueIdentifier>{d4043599-777c-4f74-b75a-4680489e750c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="dimensions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="entity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="vec2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="rectangle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="shine.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Game Files</Filter>
     </ClCompile>
     <ClCompile Include="color.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\EngineFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="dimensions.cpp">
+      <Filter>Source Files\EngineFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>Source Files\EngineFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Source Files\EngineFiles</Filter>
     </ClCompile>
     <ClCompile Include="input.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\EngineFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="log.cpp">
+      <Filter>Source Files\EngineFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="rectangle.cpp">
+      <Filter>Source Files\EngineFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="shine.cpp">
+      <Filter>Source Files\EngineFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="vec2.cpp">
+      <Filter>Source Files\EngineFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>Source Files\Game Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="game.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="color.h">
+      <Filter>Header Files\Engine Headers</Filter>
     </ClInclude>
     <ClInclude Include="dimensions.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Engine Headers</Filter>
     </ClInclude>
     <ClInclude Include="entity.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Engine Headers</Filter>
     </ClInclude>
-    <ClInclude Include="vec2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="rectangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="shine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="color.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="game.h">
+      <Filter>Header Files\Engine Headers</Filter>
     </ClInclude>
     <ClInclude Include="input.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Engine Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="log.h">
+      <Filter>Header Files\Engine Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="rectangle.h">
+      <Filter>Header Files\Engine Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="shine.h">
+      <Filter>Header Files\Engine Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="vec2.h">
+      <Filter>Header Files\Engine Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Header Files\Game Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
