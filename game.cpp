@@ -25,7 +25,7 @@ namespace Harmonia
 
 		for (auto entity : Entity::entities)
 		{
-			if (!entity.Create())
+			if (!entity->Create())
 				return false;
 		}
 
@@ -57,8 +57,8 @@ namespace Harmonia
 
 			for (auto entity : Entity::entities)
 			{
-				entity.Update(deltaTime);
-				entity.shine->Render(renderer);
+				entity->update(deltaTime);
+				entity->shine->Render(renderer);
 			}
 
 			SDL_RenderPresent(renderer);

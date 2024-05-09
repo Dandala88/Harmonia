@@ -1,7 +1,7 @@
 #include <SDL.h>
 #include "game.h"
 #include "rectangle.h"
-#include "player.cpp"
+#include "player.h"
 
 using namespace Harmonia;
 
@@ -34,7 +34,7 @@ int main(int argc, char* args[])
 {
 	if (game.create())
 	{
-		input.directional = ([&](Vec2 vec) { player.Move(vec); });
+		input.directional = ([&](Vec2 vec) { player.move(vec); });
 		game.update(&input);
 	}
 

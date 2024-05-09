@@ -15,12 +15,12 @@ namespace Harmonia
 		Vec2* location;
 		Dimensions dimensions;
 		Shine* shine;
-		static std::list<Entity> entities;
+		static std::list<Entity*> entities;
 
 		Entity(std::string name, Vec2* location, Dimensions dimensions, Shine* shine);
 
 		virtual bool Create();
-		virtual void Update(float dt);
+		virtual void update(float dt);
 		virtual void Destroy();
 
 		~Entity();

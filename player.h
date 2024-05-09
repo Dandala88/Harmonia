@@ -4,7 +4,7 @@
 
 namespace Harmonia
 {
-	class Player : public Harmonia::Entity
+	class Player : public Entity
 	{
 	public:
 		float speed;
@@ -12,7 +12,7 @@ namespace Harmonia
 
 		Player(std::string name, Vec2* location, Dimensions dimensions, Shine* shine, float speed);
 
-		void Update(float dt) override;
-		void Move(Harmonia::Vec2 input);
+		void update(float dt) override;
+		void move(Vec2 input);
 	};
 }

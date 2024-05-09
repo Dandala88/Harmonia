@@ -2,11 +2,11 @@
 
 namespace Harmonia
 {	
-	std::list<Entity> Entity::entities;
+	std::list<Entity*> Entity::entities;
 
 	Entity::Entity(std::string name, Vec2* location, Dimensions dimensions, Shine* shine) : name(name), location(location), dimensions(dimensions), shine(shine)
 	{
-		Entity::entities.push_back(*this);
+		Entity::entities.push_back(this);
 	}
 
 	bool Harmonia::Entity::Create()
@@ -15,7 +15,7 @@ namespace Harmonia
 		return true;
 	}
 
-	void Harmonia::Entity::Update(float dt)
+	void Harmonia::Entity::update(float dt)
 	{
 		shine->location = *location;
 	}

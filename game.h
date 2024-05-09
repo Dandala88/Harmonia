@@ -1,6 +1,5 @@
 #pragma once
 #include "SDL.h"
-#include "dimensions.h"
 #include "entity.h"
 #include <stdio.h>
 #include "input.h"
