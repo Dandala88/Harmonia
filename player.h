@@ -15,5 +15,6 @@ namespace Harmonia
 		void update(float dt) override;
 		void move(Vec2 input);
 		void jump();
+		void roll();
 	};
 }

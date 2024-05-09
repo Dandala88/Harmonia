@@ -33,6 +33,9 @@ int main(int argc, char* args[])
 	if (game.create())
 	{
 		input.directional = ([&](Vec2 vec) { player.move(vec); });
+		input.action_a = ([&]() { player.jump(); });
+		input.action_b = ([&]() { player.roll(); });
+
 		game.update(&input);
 	}
 

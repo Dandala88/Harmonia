@@ -33,4 +33,13 @@ void Harmonia::Input::Update(float deltaTime)
 	}
 	directional(input);
 
+	if (keyState[SDL_SCANCODE_RETURN])
+	{
+		action_a();
+	}
+
+	if (keyState[SDL_SCANCODE_RSHIFT])
+	{
+		action_b();
+	}
 }

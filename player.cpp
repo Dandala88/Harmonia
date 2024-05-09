@@ -23,3 +23,8 @@ void Player::jump()
 {
 	Log::info("jump");
 }
+
+void Player::roll()
+{
+	Log::info("roll");
+}
