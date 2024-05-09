@@ -18,6 +18,7 @@ namespace Harmonia
 		float maxY();
 
 		bool operator[](BoundingBox other);
+		Vec2 push(BoundingBox other);
 	};
 }
 

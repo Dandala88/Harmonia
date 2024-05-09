@@ -34,3 +34,14 @@ bool Harmonia::BoundingBox::operator[](BoundingBox other)
 
 	return true;
 }
+
+Harmonia::Vec2 Harmonia::BoundingBox::push(BoundingBox other)
+{
+	float xOverlap = 0;
+	if (maxX() > other.minX() && maxX() < other.maxX())
+		xOverlap = other.minX() - maxX();
+	if (minX() < other.maxX() && minX() > other.minX())
+		xOverlap = other.maxX() - minX();
+
+	return Vec2{ xOverlap, 0.0 };
+}

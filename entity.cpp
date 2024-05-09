@@ -30,6 +30,11 @@ namespace Harmonia
 		boundingBox->dimensions = dimensions;
 	}
 
+	void Harmonia::Entity::move(Vec2 movement)
+	{
+		*location += movement;
+	}
+
 	void Harmonia::Entity::destroy()
 	{
 		printf("Destroying entity %s\n", name.c_str());

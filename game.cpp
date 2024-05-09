@@ -55,19 +55,26 @@ namespace Harmonia
 				}
 			}
 
-			for (auto entity : Entity::entities)
-			{
+			for (auto entityIter = Entity::entities.begin(); entityIter != Entity::entities.end(); ++entityIter) {
+
+				auto entity = *entityIter;
+
+				if (entity == nullptr) {
+					continue;
+				}
+
 				entity->update(deltaTime);
 
 				for (auto entityB : Entity::entities)
 				{
-					if (entity == entityB)
+					if (entity == nullptr || entity == entityB)
 						continue;
-					BoundingBox bba = *entity->boundingBox;
-					BoundingBox bbb = *entityB->boundingBox;
+					BoundingBox bba = *(entity->boundingBox);
+					BoundingBox bbb = *(entityB->boundingBox);
 					if (bba[bbb])
 					{
-						printf("hit");
+						auto amount = bba.push(bbb);
+						entity->move(amount);
 					}
 				}
 
