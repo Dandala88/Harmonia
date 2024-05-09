@@ -20,7 +20,7 @@ Rectangle playerRect
 Player player =
 {
 	"Player",
-	{ 10, 0 },
+	{ 100, 100 },
 	{ 16, 16 },
 	&playerRect,
 	100,

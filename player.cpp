@@ -18,3 +18,8 @@ void Player::move(Vec2 input)
 {
 	movement = input;
 }
+
+void Player::jump()
+{
+	Log::info("jump");
+}

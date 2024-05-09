@@ -6,13 +6,13 @@ namespace Harmonia
 
 	Entity::Entity(std::string name, Vec2 startLocation, Dimensions dimensions, Shine* shine) : name(name), startLocation(startLocation), dimensions(dimensions), shine(shine)
 	{
-		location = &startLocation;
 		Entity::entities.push_back(this);
 	}
 
 	bool Harmonia::Entity::Create()
 	{
 		printf("Creating entity %s", name.c_str());	
+		location = &startLocation;
 		return true;
 	}
 

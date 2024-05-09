@@ -31,9 +31,6 @@ void Harmonia::Input::Update(float deltaTime)
 		input.x = 1.0;
 		inputMade = true;
 	}
+	directional(input);
 
-	if (inputMade)
-	{
-		directional(input);
-	}
 }
