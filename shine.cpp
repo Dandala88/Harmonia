@@ -5,6 +5,6 @@ Harmonia::Shine::Shine(Vec2 location, Color color) : location(location), color(c
 {
 }
 
-void Harmonia::Shine::Render(SDL_Renderer* renderer)
+void Harmonia::Shine::render(SDL_Renderer* renderer)
 {
 }

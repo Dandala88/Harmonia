@@ -11,7 +11,7 @@ namespace Harmonia
 
 		Rectangle(Vec2 location, Dimensions dimensions, Color color);
 
-		void Render(SDL_Renderer* renderer) override;
+		void render(SDL_Renderer* renderer) override;
 	};
 
 }

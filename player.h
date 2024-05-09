@@ -1,5 +1,5 @@
 #pragma once
-#include "entity.h";
+#include "entity.h"
 #include "log.h"
 
 namespace Harmonia
@@ -10,7 +10,7 @@ namespace Harmonia
 		float speed;
 		Vec2 movement;
 
-		Player(std::string name, Vec2* location, Dimensions dimensions, Shine* shine, float speed);
+		Player(std::string name, Vec2 startLocation, Dimensions dimensions, Shine* shine, float speed);
 
 		void update(float dt) override;
 		void move(Vec2 input);

@@ -13,6 +13,6 @@ namespace Harmonia
 
 		Shine(Vec2 location, Color color);
 
-		virtual void Render(SDL_Renderer* renderer);
+		virtual void render(SDL_Renderer* renderer);
 	};
 }

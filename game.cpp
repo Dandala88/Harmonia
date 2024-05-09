@@ -58,7 +58,7 @@ namespace Harmonia
 			for (auto entity : Entity::entities)
 			{
 				entity->update(deltaTime);
-				entity->shine->Render(renderer);
+				entity->shine->render(renderer);
 			}
 
 			SDL_RenderPresent(renderer);

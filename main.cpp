@@ -17,12 +17,10 @@ Rectangle playerRect
 	{0, 0, 255 },
 };
 
-Vec2 playerPosition = { 0, 0 };
-
 Player player =
 {
 	"Player",
-	&playerPosition,
+	{ 10, 0 },
 	{ 16, 16 },
 	&playerRect,
 	100,

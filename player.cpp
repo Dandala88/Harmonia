@@ -2,7 +2,7 @@
 
 using namespace Harmonia;
 
-Player::Player(std::string name, Vec2* location, Dimensions dimensions, Shine* shine, float speed) : Entity(name, location, dimensions, shine)
+Player::Player(std::string name, Vec2 startLocation, Dimensions dimensions, Shine* shine, float speed) : Entity(name, startLocation, dimensions, shine)
 {
 	this->speed = speed;
 	this->movement = { 0, 0 };

@@ -4,8 +4,9 @@ namespace Harmonia
 {	
 	std::list<Entity*> Entity::entities;
 
-	Entity::Entity(std::string name, Vec2* location, Dimensions dimensions, Shine* shine) : name(name), location(location), dimensions(dimensions), shine(shine)
+	Entity::Entity(std::string name, Vec2 startLocation, Dimensions dimensions, Shine* shine) : name(name), startLocation(startLocation), dimensions(dimensions), shine(shine)
 	{
+		location = &startLocation;
 		Entity::entities.push_back(this);
 	}
 
