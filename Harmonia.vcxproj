@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="bounding_box.cpp" />
     <ClCompile Include="color.cpp" />
     <ClCompile Include="dimensions.cpp" />
     <ClCompile Include="entity.cpp" />
@@ -32,6 +33,7 @@
     <ClCompile Include="vec2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bounding_box.h" />
     <ClInclude Include="color.h" />
     <ClInclude Include="dimensions.h" />
     <ClInclude Include="entity.h" />

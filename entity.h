@@ -4,6 +4,7 @@
 #include "vec2.h"
 #include <list>
 #include "shine.h"
+#include "bounding_box.h"
 
 
 namespace Harmonia
@@ -15,13 +16,15 @@ namespace Harmonia
 		Vec2 startLocation;
 		Dimensions dimensions;
 		Shine* shine;
+		BoundingBox* boundingBox;
+
 		static std::list<Entity*> entities;
 
 		Entity(std::string name, Vec2 startLocation, Dimensions dimensions, Shine* shine);
 
-		virtual bool Create();
+		virtual bool create();
 		virtual void update(float dt);
-		virtual void Destroy();
+		virtual void destroy();
 
 		~Entity();
 

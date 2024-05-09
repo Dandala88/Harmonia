@@ -25,7 +25,7 @@ namespace Harmonia
 
 		for (auto entity : Entity::entities)
 		{
-			if (!entity->Create())
+			if (!entity->create())
 				return false;
 		}
 
@@ -58,6 +58,19 @@ namespace Harmonia
 			for (auto entity : Entity::entities)
 			{
 				entity->update(deltaTime);
+
+				for (auto entityB : Entity::entities)
+				{
+					if (entity == entityB)
+						continue;
+					BoundingBox bba = *entity->boundingBox;
+					BoundingBox bbb = *entityB->boundingBox;
+					if (bba[bbb])
+					{
+						printf("hit");
+					}
+				}
+
 				entity->shine->render(renderer);
 			}
 
@@ -69,6 +82,10 @@ namespace Harmonia
 
 	void Game::destroy()
 	{
+		for (auto entity : Entity::entities)
+		{
+			entity->destroy();
+		}
 		SDL_DestroyRenderer(renderer);
 		SDL_DestroyWindow(window);
 		window = NULL;

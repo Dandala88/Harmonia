@@ -26,6 +26,21 @@ Player player =
 	100,
 };
 
+Rectangle blockRect
+{
+	{ 0.0, 0.0 },
+	{ 16, 16 },
+	{ 255, 0, 0 },
+};
+
+Entity block
+{
+	"Block_1",
+	{ 100, 120 },
+	{ 16, 16 },
+	& blockRect,
+};
+
 Input input(&player);
 
 int main(int argc, char* args[])
