@@ -3,6 +3,7 @@
 #include "dimensions.h"
 #include "entity.h"
 #include <stdio.h>
+#include "input.h"
 
 namespace Harmonia
 {
@@ -14,10 +15,12 @@ namespace Harmonia
         SDL_Renderer* renderer = NULL;
         SDL_Event e;
         bool alive = true;
+        float lastTick = 0;
+        int currentFrame = 1;
 
         //hooks
         bool create();
-        void update();
+        void update(Input* input);
         void destroy();
     };
 }

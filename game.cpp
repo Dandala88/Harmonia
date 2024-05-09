@@ -2,6 +2,7 @@
 
 namespace Harmonia
 {
+
 	bool Game::create()
 	{
 		if (SDL_Init(SDL_INIT_VIDEO) < 0)
@@ -31,16 +32,18 @@ namespace Harmonia
 		return true;
 	}
 
-	void Game::update()
+	void Game::update(Input* input)
 	{
 		while (alive)
 		{
 			SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 			SDL_RenderClear(renderer);
 
-			// while (SDL_GetTicks64() < lastTick + 16);
-			// float deltaTime = (SDL_GetTicks64() / currentFrame) / 1000.0;
-			// lastTick = SDL_GetTicks64();
+			 while (SDL_GetTicks64() < lastTick + 16);
+			 float deltaTime = (SDL_GetTicks64() / currentFrame) / 1000.0;
+			 lastTick = SDL_GetTicks64();
+
+			 input->Update(deltaTime);
 
 			SDL_UpdateWindowSurface(window);
 
@@ -52,7 +55,15 @@ namespace Harmonia
 				}
 			}
 
+			for (auto entity : Entity::entities)
+			{
+				entity.Update(deltaTime);
+				entity.shine->Render(renderer);
+			}
+
 			SDL_RenderPresent(renderer);
+
+			++currentFrame;
 		}
 	}
 

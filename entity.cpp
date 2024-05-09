@@ -4,7 +4,7 @@ namespace Harmonia
 {	
 	std::list<Entity> Entity::entities;
 
-	Entity::Entity(std::string name, Vector2 position, Dimensions dimensions) : name(name), position(position), dimensions(dimensions)
+	Entity::Entity(std::string name, Vec2* location, Dimensions dimensions, Shine* shine) : name(name), location(location), dimensions(dimensions), shine(shine)
 	{
 		Entity::entities.push_back(*this);
 	}
@@ -17,6 +17,7 @@ namespace Harmonia
 
 	void Harmonia::Entity::Update(float dt)
 	{
+		shine->location = *location;
 	}
 
 	void Harmonia::Entity::Destroy()

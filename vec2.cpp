@@ -1,28 +1,28 @@
-#include "vector2.h"
+#include "vec2.h"
 #include <math.h>
 
 namespace Harmonia
 {
-	Vector2 Vector2::operator*(float scalar) const {
+	Vec2 Vec2::operator*(float scalar) const {
 		return { x * scalar, y * scalar };
 	}
 
-	Vector2& Vector2::operator+=(const Vector2& other) {
+	Vec2& Vec2::operator+=(const Vec2& other) {
 		x += other.x;
 		y += other.y;
 		return *this;
 	}
 
-	Vector2  Vector2::operator+(const Vector2& other) {
+	Vec2  Vec2::operator+(const Vec2& other) {
 		*this += other;
 		return *this;
 	}
 
-	float Vector2::magnitude() {
+	float Vec2::magnitude() {
 		return sqrt(x * x + y * y);
 	}
 
-	Vector2 Vector2::normalize() {
+	Vec2 Vec2::normalize() {
 		float mag = magnitude();
 		if (mag != 0) {
 			return { x / mag, y / mag };
