@@ -396,3 +396,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/Harmonia.vcxproj
+/Harmonia.vcxproj.filters
