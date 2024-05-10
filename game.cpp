@@ -65,16 +65,15 @@ namespace Harmonia
 
 				entity->update(deltaTime);
 
-				for (auto entityB : Entity::entities)
+				
+				if (entity != nullptr && entity != input->control)
 				{
-					if (entity == nullptr || entity == entityB)
-						continue;
-					BoundingBox bba = *(entity->boundingBox);
-					BoundingBox bbb = *(entityB->boundingBox);
+					BoundingBox bba = *(input->control->boundingBox);
+					BoundingBox bbb = *(entity->boundingBox);
 					if (bba[bbb])
 					{
-						auto amount = bba.push(bbb);
-						entity->move(amount);
+						auto amount = bba.getOverlap(bbb);
+						input->control->addMotion(amount);
 					}
 				}
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "dimensions.h"
 #include "vec2.h"
+#include <algorithm>
 
 namespace Harmonia
 {
@@ -18,7 +19,7 @@ namespace Harmonia
 		float maxY();
 
 		bool operator[](BoundingBox other);
-		Vec2 push(BoundingBox other);
+		Vec2 getOverlap(BoundingBox other);
 	};
 }
 

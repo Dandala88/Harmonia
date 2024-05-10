@@ -26,7 +26,7 @@ namespace Harmonia
 		virtual void update(float dt);
 		virtual void destroy();
 
-		virtual void move(Vec2 movement);
+		virtual void addMotion(Vec2 movement);
 
 		~Entity();
 

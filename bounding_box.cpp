@@ -35,13 +35,25 @@ bool Harmonia::BoundingBox::operator[](BoundingBox other)
 	return true;
 }
 
-Harmonia::Vec2 Harmonia::BoundingBox::push(BoundingBox other)
+Harmonia::Vec2 Harmonia::BoundingBox::getOverlap(BoundingBox other)
 {
-	float xOverlap = 0;
-	if (maxX() > other.minX() && maxX() < other.maxX())
-		xOverlap = other.minX() - maxX();
-	if (minX() < other.maxX() && minX() > other.minX())
-		xOverlap = other.maxX() - minX();
+    float overlapX = std::max(0.0f, std::min(maxX(), other.maxX()) - std::max(minX(), other.minX()));
+    float overlapY = std::max(0.0f, std::min(maxY(), other.maxY()) - std::max(minY(), other.minY()));
 
-	return Vec2{ xOverlap, 0.0 };
+    if (overlapX < overlapY) {
+        if (minX() < other.minX()) {
+            return Vec2{ -overlapX, 0.0 };
+        }
+        else {
+            return Vec2{ overlapX, 0.0 };
+        }
+    }
+    else {
+        if (minY() < other.minY()) {
+            return Vec2{ 0.0, -overlapY };
+        }
+        else {
+            return Vec2{ 0.0, overlapY };
+        }
+    }
 }

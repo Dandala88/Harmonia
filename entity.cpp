@@ -30,7 +30,7 @@ namespace Harmonia
 		boundingBox->dimensions = dimensions;
 	}
 
-	void Harmonia::Entity::move(Vec2 movement)
+	void Harmonia::Entity::addMotion(Vec2 movement)
 	{
 		*location += movement;
 	}
